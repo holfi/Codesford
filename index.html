@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codesford</title>
+  
+  <!-- Styles and Google font -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="src/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="src/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="src/favicon-16x16.png">
+<link rel="manifest" href="src/site.webmanifest">
+<link rel="mask-icon" href="src/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+  
+  <header class="header">
+    <div class="header-container">
+
+      <!-- Site logo -->
+
+   <div class="logo">
+     <a href="#"><img src="src/Logo.svg" alt="codesford" class="codesford-logo"></a>
+   </div> 
+
+   <!-- Site navigation menu -->
+
+   <nav class="header-menu">
+     <ul>
+       <li class="header-menu_item"><a href="#aboutp"><i class="fa fa-wpexplorer" aria-hidden="false"></i> ABOUT PROJECT</a></li>
+       <li class="header-menu_item"><a href="#crew"><i class="fa fa-users" aria-hidden="true"></i> MEET THE CREW</a></li>
+       <li class="header-menu_item"><a href="#blog"><i class="fa fa-book" aria-hidden="true"></i> BLOG</a></li>
+       <li class="header-menu_item"><a href="#about"><i class="fa fa-id-card-o" aria-hidden="true"></i> ABOUT US</a></li>
+       <li class="header-menu_item"><a href="#contact"><i class="fa fa-globe" aria-hidden="true"></i> CONTACT</a></li>
+     </ul>
+   </nav>
+
+   <!-- Button for language change -->
+
+   <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">ENGLISH</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#">RUSSIAN</a>
+      <a href="#">CHINESE</a>
+    </div>
+  </div> 
+
+  <!-- Menu on mobile -->
+
+   <div class="burger-menu">
+    <a href="#" class="burger-menu__button">
+      <span class="burger-menu__lines"></span>
+    </a>
+   
+     <nav class="burger-menu__nav">
+   
+      <a href="#aboutp" class="burger-menu__link"><i class="fa fa-wpexplorer" aria-hidden="false"></i> ABOUT PROJECT</a>
+      <a href="#crew" class="burger-menu__link"><i class="fa fa-users" aria-hidden="true"></i> MEET THE CREW</a>
+      <a href="#blog" class="burger-menu__link"><i class="fa fa-book" aria-hidden="true"></i> BLOG</a>
+      <a href="#about" class="burger-menu__link"><i class="fa fa-id-card-o" aria-hidden="true"></i> ABOUT US</a>
+      <a href="#contact" class="burger-menu__link"><i class="fa fa-globe" aria-hidden="true"></i> CONTACT</a>
+   
+     </nav>
+   
+     <div class="burger-menu__overlay"></div>
+  
+    </div>
+  
+  </div>
+  </header>
+
+    <!-- Button "Get Started" on the main screen -->
+
+    <section class="get-started">
+        <a class="get-started_text"><h1>Coding never was so easy!</h1>    
+      <div>
+        <a href="#apoutp" class="button-get_started">Get Started</a>
+      </div>
+
+      <div class="slider">
+            <!-- Slideshow container -->
+ <div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="src/test1.png" style="width:70%">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="src/test2.png" style="width:70%">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="src/test3.png" style="width:70%">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="src/test4.png" style="width:70%">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="src/test5.png" style="width:70%">
+    <div class="text"></div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div> 
+      </div>
+
+    </section>
+
+    <!-- Section "About project" -->
+
+    <section id="aboutp" class="about-project">
+      <h2>ABOUT PROJECT</h2>
+
+      <div class="container-project">
+
+        <div class="container-users">
+          <h3>Pain of potential users</h3>
+        </div>
+
+        <div>
+          <h4 class="first-reason">Сommonplace <span>old</span> courses<img src="src/floppyDisk.svg"></h4>
+        </div>
+
+        <div>
+          <h4 class="second-reason" style="color: #5BC3F8;"><img src="src/cpu.svg" alt="cpu">Difficult to find <span>effective</span><br> 
+            proggramming courses</h4>
+        </div>
+
+        <div >    
+          <h4 class="last-reason">Hard to find <span>a job</span><img src="src/laptop.svg" alt="laptop"></h4>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section "How we will solve problems"  -->
+
+    <section class = "users-pain">
+      
+      <h2>We will solve <br> these problems in 5 steps</h2>
+
+      <div class = "five-steps">
+      
+      <div class = "step-item">
+        <p><img src="src/step1.svg" alt="step 1">We will not specialize in everything, but we will train 
+          just in development (HTML5, CSS3, Front-end, Back-end, QA testing, 
+          Team Leadership, IT Architecture, etc.)</p>
+      </div>
+
+      <div class = "step-item">
+        <p><img src="src/step2.svg" alt="step 2">We plan to train 
+          not only with the help of texts and videos, 
+          but also with the help of homework, tasks, projects</p>
+      </div>
+        
+      <div class = "step-item">
+        <p><img src="src/step3.svg" alt="step 3">It will be possible to pass tests and exams on our web site 
+          and to get a serious certificate with a serial 
+          number or you can prepare for third-party certification</p>
+      </div>
+        
+      <div class = "step-item">
+        <p><img src="src/step4.svg" alt="step 4">Successful students will be able to take practice 
+          on our startup, and they will also be able to get recommendations
+           on paper or in electronic form</p>
+      </div>
+         
+      <div class = "step-item">
+        <p><img src="src/step5.svg" alt="step 5">We will help in finding ads about employment, giving 
+        advice on how to write your CV with a portfolio, how to find jobs with
+         a high salary, and how to prepare for an interview</p>
+      </div>
+
+      </div>   
+         
+    </section>
+
+    <!-- Section "You can set the price" -->
+
+    <section class = "set-the_price">
+
+      <h2>Set the desired price</h2>
+
+        <p>On our project you will be able to set the desired price <br> and terms of training</p>
+
+        <hr class = "top_hr">
+
+        <p>CodesFord is an educational and gaming project where <br> you can study technology 
+        to find a developer's job. Have <br> you long dreamed of getting an education at Oxford level?! </p>
+
+        <hr class = "bottom_hr">
+
+        <p>If you want not to learn, but to teach other <br> people, 
+        then we can place your course on our marketplace</p>
+
+      
+
+    </section>
+
+    <!-- Section "Codesford's parts" -->
+
+    <section class = "codesford-parts">
+
+      <h2>3 Codesford’s parts</h2>
+
+      <div>
+        
+        <p>
+          Our startup is at the junction of three technologies: EdTech, GameTech and HRTech. 
+          Despite the fact that a lot of useful elements will be free on our web site and inside 
+          in our mobile apps, our team plans to develop a commercial project. In this regard, 
+          we will be grateful to users for feedback and for orders for paid products, for example, 
+          Initial Professional Orientation, training interactive courses, assistance in finding your 
+          future job, and much more that you need
+        </p>
+
+        <img src="src/circles.svg" alt="codesford's parts" style = "text-align: center;">
+
+      </div>
+
+    </section>
+
+    <!-- Section "Why us?" -->
+
+    <section class = "why-us">
+
+    <h2>Why us?</h2>
+
+    <div>
+
+        <hr class = "top_hr-us">
+
+        <p>
+          Our team understands that we have competitors. There are other sites where you can 
+          study programming. But there you cannot ask for your tuition price. They tell you the price. 
+          There are many IT enthusiasts who would like to start some IT trainings, 
+          demanding their price. At the same time, there are also many experienced developers 
+          and teachers who would like to earn extra money, but do not know how much their IT 
+          development course can cost. Our marketplace helps junior developers to set the 
+          desired price for studying in programming courses. 
+        </p>
+
+        <hr class = "bottom_hr-us">
+      
+    </div> 
+
+    </section>
+
+    <!-- Section "Where can I use it?" -->
+
+    <section class = "use-it">
+
+      <h2>Where can I use it?</h2>
+  
+      <div>
+  
+          <p>
+            If you want to study Computer Science at Oxford, then it is long and expensive. 
+            But in the modern world there are projects that allow you to get knowledge at 
+            a decent level. Surely, at a sufficient level for your employment in a sustainable 
+            company, where you will have a good salary. Or, having sufficient knowledge, you 
+            can develop your own business project.
+          </p>
+  
+      </section>
+
+    <!-- Section "Where can I use it?" - Continue -->
+
+    <section class = "use-it_continue">
+  
+      <div>
+
+          <p>If it doesn’t matter to you that the building in which you study is not like Hogwarts, 
+            and if you do not want to leave your relatives and friends for years, then you can study 
+            from home or from any place where there is Internet and your device with Internet 
+            (laptop or smartphone). You do not have to spend tens or even hundreds of thousands of 
+            dollars to study at the university. You can get the necessary knowledge from the field 
+            of Computer Science for a lower budget. Moreover, you now have the opportunity to demand 
+            your desired price for a particular course. For example, if you want to take an 
+            introductory IT course, then this can be an absolutely reasonable price. Or, 
+            if you want to study web development in more depth, it can cost more, but still not 
+            tens or hundreds of thousands of dollars.
+            Nowadays, any person from any city in the world has the opportunity to remotely study 
+            on a convenient schedule in a short time at an affordable price.
+            
+            If you want not to study, but to teach, then our project gives you the opportunity to 
+            transfer your knowledge in an interactive way. Thus, you can earn money, being anywhere 
+            in the world. </p>
+        
+      </div> 
+  
+    </section> 
+    
+    <!-- Section "Refund" -->
+
+    <section class = "refund">
+
+      <h2>Refund Guaranteed</h2>
+  
+      <div>
+  
+          <hr class = "top_hr-refund">
+  
+          <p>
+            If you do not like the course, then you can always send a request for a refund. 
+            All funds for the course, excluding the service fee and transfer fee, 
+            will be returned to your bank card.
+          </p>
+  
+          <hr class = "bottom_hr-refund">
+        
+      </div> 
+  
+      </section>
+    
+    <!-- Section "Meet The Crew" -->
+
+    <section id="crew" class="crew">
+      <h4>MEET THE CREW</h4>
+
+      <div class="cards">
+          
+      <div class="item">
+        <div><a href="crew/index.html#Oleg"><img src="src/Trainee.jpg" alt="Oleg Gribanov"></a></div>
+        <h5>Oleg Gribanov</h5>
+        <p>Trainee IT Specialist</p>
+      </div>
+
+      <div class="item">
+        <div><a href="crew/index.html#Jane"><img src="src/SpirinaJane.jpg" alt="Jane Spirina"></a></div>
+        <h5>Jane Spirina</h5>
+        <p>Big Data Expert</p>
+      </div>
+
+      <div class="item">
+        <div><a href="crew/index.html#Nikita"><img src="src/Developer.png" alt="Nikita Svyazhin"></a></div>
+        <h5>Nikita Svyazhin</h5>
+        <p>Developer</p>
+      </div>
+
+      <div class="item">
+        <div><a href="crew/index.html#Anton"><img src="src/anton_kataev.png" alt="Anton Kataev" class = "test"></a></div>
+        <h5>Anton Kataev</h5>
+        <p>Developer</p>
+      </div>
+
+      <div class="item">
+        <div><a href="crew/index.html#Viktor"><img src="src/viktor_urusov.png" alt="Viktor Urusov"></a></div>
+        <h5>Viktor Urusov</h5>
+        <p>Developer</p>
+      </div>
+
+      <div class="item">
+        <div><a href="crew/index.html#Evgeniy"><img src="src/evgeniy_korobkov.png" alt="Evgeniy Korobkov"></a></div>
+        <h5>Evgeniy Korobkov</h5>
+        <p>Developer</p>
+      </div>
+
+      <div class="item">
+        <div><a href="crew/index.html#Valeria"><img src="src/valeria.png" alt="Valeria Avdonina" class="valeria"></a></div>
+        <h5>Valeria Avdonina</h5>
+        <p>Developer</p>
+      </div>
+        
+    </section>
+
+    <!-- Section "Contact" -->
+
+    <section id="contact" class="contact">
+      <h4>CONTACT</h4>
+
+      <!-- Google Map -->
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12630.774732457032!2d144.9169935864159!3d-37.67990488065281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65a884af12a1f%3A0xcc6725131d70e540!2zNTktNjkgUGVhcmNlZGFsZSBQYXJhZGUsIEJyb2FkbWVhZG93cyBWSUMgMzA0Nywg0JDQstGB0YLRgNCw0LvQuNGP!5e0!3m2!1sru!2sru!4v1590746831704!5m2!1sru!2sru" 
+       width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+      <footer>
+        
+        <div class="footer-contacts">
+
+        <img src="src/Logo.svg" alt="Codesford" class="footer-logo">
+
+        <h6>Address</h6>
+        <p>59-69 Pearcedale<br>
+          Parade,<br>
+          Broadmeadows VIC<br>
+          3047</p>
+
+          <br>
+
+          <p>codesford2020@gmail.com
+            <br>
+            <br>
+            <div class="socials">
+              <h6>Follow us</h6>
+              <p class="social-icons"><img src="src/facebook.svg" alt="facebook"> <img src="src/youtube.svg" alt="youtube"> <img src="src/telegram.svg" alt="telegram"> </p>
+            </div>
+            <br>
+            <span>&copy 2020 Codesford</span>
+          </p>
+        </div> 
+
+          <div class="footer-menu">
+            <a href="#">Home</a><br>
+            <a href="#">2020 Trends</a><br> 
+            <a href="#">Want to teach<br></a> 
+            <a href="#">Want to learn<br></a> 
+            <a href="#">Prof-orientation<br></a> 
+            <a href="#">Up your soft-skills<br></a> 
+            <a href="#">Up your hard-skills</p></a>
+          </div>
+  
+          <div class="footer-menu">
+            <a href="#">Find a job</a><br>
+            <a href="#">Learn english</a><br> 
+            <a href="#">University entrance<br></a> 
+            <a href="#">Play<br></a> 
+            <a href="#">Give a job<br></a> 
+            <a href="#">Most Valuable Professional<br></a> 
+            <a href="#">Find an intern</p></a>
+          </div>
+          
+            <div class="footer-menu">
+              <a href="#">Become an intern</a><br>
+              <a href="#">Get recommendations</a><br> 
+              <a href="#">Garanties<br></a> 
+              <a href="#">Payment<br></a> 
+              <a href="#">Refund<br></a> 
+              <a href="#">Comments<br></a> 
+              <a href="#">Contests</p></a>
+            </div>
+    
+            <div class="footer-menu" id = "menu-last">
+              <a href="#">Our graduates</a><br>
+              <a href="#">About us</a><br> 
+              <a href="#">Our product<br></a> 
+              <a href="#">Timeline<br></a> 
+              <a href="#">FAQ<br></a> 
+              <a href="#">The Investors<br></a> 
+              <a href="#">The Press</p></a>
+          
+          
+        </div>
+
+      </footer>
+
+    </section>
+  
+
+    <!-- JS scripts -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1990 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a, ul, li {
+    text-decoration: none;
+    list-style: none;
+}
+
+a {
+    color: #fff;
+}
+
+section{
+  height: 100vh;
+  background-color: rgba(104, 104, 104, 0.8);  
+}
+
+/* Header */
+
+.header-container{
+  display: flex;
+  background: rgba(104, 104, 104, 0.3);
+  position: fixed;
+  z-index: 2;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Header's links */
+
+.header-menu_item {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 94px;
+    color: #FFFFFF;
+    padding-right: 80px;
+}
+
+.header-menu_item i{
+  font-size: 22px;
+}
+
+.header-menu_item:last-child{
+    margin-right: 55px;
+}
+
+/* Site's logo */
+
+.codesford-logo {
+    width: 320px;
+}
+
+.header-menu ul {
+    display: flex;
+    
+}
+
+/* Language change button */
+
+.dropbtn {
+    background-color: transparent;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 34px;
+    color: #5BC3F8;
+    padding-right: 50px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(104, 104, 104, 0.3);
+    /*min-width: 160px; */
+    z-index: 1;
+    overflow-y: auto;
+  }
+  
+  .dropdown-content a {
+    padding: 20px;
+    background-color: transparent;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 34px;
+    color: #5BC3F8;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: rgba(104, 104, 104);}
+  
+  /* Show toggle menu */
+  .show {display:block;} 
+
+
+/* Burger Menu */
+
+.burger-menu {
+    display: none;
+}
+
+.burger-menu__button {
+
+    position: absolute; 
+    top: 10px; 
+    right: 10px;
+    z-index: 30;
+    width: 30px;  
+    height: 30px; 
+    border-radius: 50%;  
+    background-color: transparent;
+    transition: 0.4s;
+   }
+   
+   .burger-menu__button:hover .burger-menu__lines {
+    filter: brightness(0.7);
+    -webkit-filter: brightness(0.7);
+    }
+   
+    /* Menu's horizontal lines */
+
+   .burger-menu__lines,
+   .burger-menu__lines::after,
+   .burger-menu__lines::before {
+    position: absolute;
+    width: 24px;
+    height: 3px;
+    background-color: #fff;
+   }
+   
+   .burger-menu__lines {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+   
+   .burger-menu__lines::before {
+    content: "";
+    top: -8px;
+   }
+   
+   .burger-menu__lines::after {
+    content: "";
+    top: 8px;
+   }
+   
+   .burger-menu_active .burger-menu__button,
+   .burger-menu_active .burger-menu__lines {
+    background-color: transparent;
+   }
+   
+   .burger-menu_active .burger-menu__lines::before {
+    top: 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+   
+   .burger-menu_active .burger-menu__lines::after {
+    top: 0;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+}
+   
+/* Header's links in another menu */
+
+   .burger-menu__nav {
+    top: 0;
+    padding-top: 20px;
+    position: fixed;
+    z-index: 20;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    background-color: #2a2a2a;
+    overflow-y: auto;
+    right: -100%;
+    transition: 0.5s;
+   }
+   
+   .burger-menu_active .burger-menu__nav {
+    right: 0;
+   }
+   
+   .burger-menu__link {
+    padding: 25px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+   }
+   
+   .burger-menu__link :hover {
+    filter: brightness(0.7);
+   }
+   
+   .burger-menu__overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+   }
+   
+   .burger-menu_active .burger-menu__overlay {
+    display: block;
+   }
+
+
+   /* Crew Info */
+
+   .crew-info{
+    background: rgba(0, 0, 0, 0.3);
+    font-family: Montserrat;
+    color: #fff;
+    text-align: center;
+    height: 100%;
+    padding-bottom: 100px;
+   }
+
+   .crew-info h2{
+       font-size: 64px;
+       padding: 100px 0;
+   }
+
+   .container-crew{
+       display: flex;
+       width: 80%;
+       background: #9E9898;
+       box-shadow: 3px 8px 4px rgba(0, 0, 0, 0.3);
+       border-radius: 10px;
+       margin: 0px auto;
+       -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+       -ms-border-radius: 10px;
+       -o-border-radius: 10px;
+       margin-bottom: 100px;
+}
+
+   .card{
+    background: #5BC3F8;
+    border-radius: 10px 0px 0px 10px;
+    width: 20%;
+   }
+
+   .card img{
+       border-radius: 50%;
+       -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+       -ms-border-radius: 50%;
+       -o-border-radius: 50%;
+       width: 250px;
+       margin: 30px 30px 5px 30px;
+}
+
+.card h3{
+    font-weight: 800;
+    font-size: 28px;
+}
+
+.card h4{
+    font-weight: 500;
+}
+
+.description p{
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 24px;
+    width: 95%;
+    margin: auto;
+    padding-top: 20px;
+    text-align: justify;
+}
+
+.description p:last-child{
+    padding-bottom: 20px;
+}
+
+.top-line_crew{
+    border: 3px solid #5BC3F8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 80%;
+    margin: 20px auto;
+}
+
+.bottom-line_crew{
+    border: 3px solid #5BC3F8;
+    box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25);
+    width: 80%;
+    margin: 20px auto;
+}
+
+.links{
+    font-size: 34px;
+    padding: 20px;
+}
+
+.description-2 p{
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 24px;
+    width: 95%;
+    margin: auto;
+    padding: 50px 0px;
+    text-align: justify;
+}
+
+/* Responsive design */
+
+/* Height */
+
+@media (min-height: 1079px){
+    
+    .about-project{
+      background-image: url("../src/aboutProject.png");
+      background-size: 100%;
+    }
+
+    .about-project h2{
+      font-size: 78px;
+      line-height: 59px;
+      padding-top: 100px;
+    }
+
+    
+    .container-users{
+    font-size: 58px;
+    line-height: 59px;
+    padding-top: 190px;
+    }
+    
+    .container-project h4{
+    font-size: 46px;
+    line-height: 44px;
+    padding-top: 50px;
+    }
+    
+    .first-reason{
+      margin-right: 300px;  
+    }
+    
+    .last-reason{
+      margin-left: 300px;  
+    }
+  }
+
+  @media (max-height: 1078px){
+    
+    .about-project{
+      background-image: url("../src/aboutProject.png");
+      background-size: 100%;
+    }
+
+    .about-project h2{
+      font-size: 78px;
+      line-height: 59px;
+      padding-top: 100px;
+    }
+
+    
+    .container-users{
+    font-size: 58px;
+    line-height: 59px;
+    padding-top: 200px;
+    }
+    
+    .container-project h4{
+    font-size: 46px;
+    line-height: 44px;
+    padding-top: 50px;
+    }
+    
+    .first-reason{
+      margin-right: 300px;  
+    }
+    
+    .last-reason{
+      margin-left: 300px;  
+    }
+  }
+
+  @media (max-height: 986px){
+    
+    .about-project{
+      background-image: url("../src/aboutProject.png");
+      background-size: 100%;
+    }
+
+    .about-project h2{
+      font-size: 78px;
+      line-height: 59px;
+      padding-top: 100px;
+    }
+
+    
+    .container-users{
+    font-size: 58px;
+    line-height: 59px;
+    padding-top: 140px;
+    }
+    
+    .container-project h4{
+    font-size: 46px;
+    line-height: 44px;
+    padding-top: 50px;
+    }
+    
+    .first-reason{
+      margin-right: 300px;  
+    }
+    
+    .last-reason{
+      margin-left: 300px;  
+    }
+  }
+
+  @media (max-height: 870px){
+    
+    .about-project{
+      background-image: url("../src/aboutProject.png");
+      background-size: 100%;
+    }
+
+    .about-project h2{
+      font-size: 78px;
+      line-height: 59px;
+      padding-top: 100px;
+    }
+
+    
+    .container-users{
+    font-size: 58px;
+    line-height: 59px;
+    padding-top: 110px;
+    }
+    
+    .container-project h4{
+    font-size: 46px;
+    line-height: 44px;
+    padding-top: 50px;
+    }
+    
+    .first-reason{
+      margin-right: 300px;  
+    }
+    
+    .last-reason{
+      margin-left: 300px;  
+    }
+  }
+
+  @media (max-height: 830px){
+    
+    .about-project{
+      background-image: url("../src/aboutProject.png");
+      background-size: 100%;
+    }
+
+    .about-project h2{
+      font-size: 78px;
+      line-height: 59px;
+      padding-top: 100px;
+    }
+
+    
+    .container-users{
+    font-size: 58px;
+    line-height: 59px;
+    padding-top: 80px;
+    }
+    
+    .container-project h4{
+    font-size: 46px;
+    line-height: 44px;
+    padding-top: 40px;
+    }
+    
+    .first-reason{
+      margin-right: 300px;  
+    }
+    
+    .last-reason{
+      margin-left: 300px;  
+    }
+
+    .first-reason img{
+      width: 50px;
+    }
+
+    .second-reason img{
+      width: 50px;
+    }
+
+    .last-reason img{
+      width: 60px;
+    }
+  }
+
+  @media (max-height: 770px){
+    
+    .about-project{
+      background-image: url("../src/aboutProject.png");
+      background-size: 100%;
+    }
+
+    .about-project h2{
+      padding-top: 80px;
+      font-size: 70px;
+      line-height: 51px;
+    }
+
+    
+    .container-users{
+    padding-top: 80px;
+    font-size: 50px;
+    line-height: 51px;
+    }
+    
+    .container-project h4{
+    padding-top: 40px;
+    font-size: 38px;
+    line-height: 36px;
+    }
+    
+    .first-reason{
+      margin-right: 300px;  
+    }
+    
+    .last-reason{
+      margin-left: 300px;  
+    }
+
+    .first-reason img{
+      width: 50px;
+    }
+
+    .second-reason img{
+      width: 50px;
+    }
+
+    .last-reason img{
+      width: 60px;
+    }
+  }
+
+  @media (max-height: 700px){
+    
+    .about-project{
+      background-image: url("../src/aboutProject.png");
+      background-size: 100%;
+    }
+
+    .about-project h2{
+      padding-top: 80px;
+      font-size: 62px;
+      line-height: 43px;
+    }
+
+    
+    .container-users{
+    padding-top: 80px;
+    font-size: 42px;
+    line-height: 43px;
+    }
+    
+    .container-project h4{
+    padding-top: 40px;
+    font-size: 30px;
+    line-height: 28px;
+    }
+    
+    .first-reason{
+      margin-right: 300px;  
+    }
+    
+    .last-reason{
+      margin-left: 300px;  
+    }
+
+    .first-reason img{
+      width: 40px;
+    }
+
+    .second-reason img{
+      width: 50px;
+    }
+
+    .last-reason img{
+      width: 50px;
+    }
+  }
+
+
+
+
+
+
+
+
+/* Width */
+
+@media(max-width: 1860px){
+
+  .socials-contacts{
+    display: none;
+  }
+
+  .footer-contacts span{
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+  }
+  
+  .contact h4{
+    padding-bottom: 100px;
+    font-size: 64px;
+    line-height: 78px;
+    letter-spacing: 0.15em;
+    padding-top: 100px;
+}
+
+footer{
+  padding-top: 100px;
+}
+
+.footer-contacts{
+  margin-left: -110px;
+}
+
+.footer-contacts h6{
+font-size: 28px;
+line-height: 34px;
+color: #FFFFFF;
+}
+
+.footer-contacts p{
+font-size: 22px;
+line-height: 28px;
+color: #FFFFFF;
+}
+
+.footer-logo{
+  width: 250px;
+  margin-left: -20px;
+  padding-right: 30px;
+}
+
+.footer-menu a{
+font-size: 20px;
+line-height: 33px;
+color: #FFFFFF;
+}
+
+.socials{
+
+font-size: 28px;
+line-height: 34px;
+color: #FFFFFF;
+padding-right: 40px;
+}
+
+.social-icons img{
+  width: 55px;
+  padding-right: 43px;
+  padding-top: 20px;
+}  
+}
+
+@media (max-width: 1840px){
+  .header-menu_item {
+      font-size: 24px;
+      line-height: 94px;
+      padding-right: 55px;
+  }
+  
+  .codesford-logo {
+      width: 220px;
+  }
+
+  .header-menu_item:last-child{
+      margin-right: 55px;
+  }
+
+  .dropbtn {
+      font-size: 24px;
+      line-height: 34px;
+      color: #5BC3F8;
+      padding-right: 50px;
+      
+    }
+
+    .dropdown-content a {
+      padding: 20px;
+      font-size: 24px;
+      line-height: 34px;
+      color: #5BC3F8;
+    }
+}
+
+  @media (max-width: 1678px){
+    .header-menu_item {
+        font-size: 24px;
+        line-height: 94px;
+        padding-right: 55px;
+    }
+    
+    .codesford-logo {
+        width: 220px;
+    }
+
+    .header-menu_item:last-child{
+        margin-right: 55px;
+    }
+
+    .dropbtn {
+        font-size: 24px;
+        line-height: 34px;
+        color: #5BC3F8;
+        padding-right: 50px;
+        
+      }
+
+      .dropdown-content a {
+        padding: 20px;
+        font-size: 24px;
+        line-height: 34px;
+        color: #5BC3F8;
+      }
+
+      .contact h4{
+        padding-bottom: 100px;
+        font-size: 64px;
+        line-height: 78px;
+        letter-spacing: 0.15em;
+        padding-top: 100px;
+    }
+    
+    footer{
+      padding-top: 100px;
+    }
+    
+    .footer-contacts{
+      margin-left: -110px;
+    }
+    
+    .footer-contacts h6{
+    font-size: 26px;
+    line-height: 30px;
+    color: #FFFFFF;
+    }
+    
+    .footer-contacts p{
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    }
+    
+    .footer-logo{
+      width: 220px;
+      margin-left: -20px;
+      padding-right: 30px;
+    }
+    
+    .footer-menu a{
+    font-size: 18px;
+    line-height: 29px;
+    color: #FFFFFF;
+    }
+    
+    .socials{
+    
+    font-size: 26px;
+    line-height: 30px;
+    color: #FFFFFF;
+    padding-right: 40px;
+    }
+    
+    .social-icons img{
+      width: 50px;
+      padding-right: 40px;
+      padding-top: 20px;
+    } 
+  }
+
+  @media (max-width: 1516px){
+    .header-menu_item {
+        font-size: 22px;
+        line-height: 84px;
+        padding-right: 50px;
+    }
+    
+    .codesford-logo {
+        width: 220px;
+    }
+
+    .header-menu_item:last-child{
+        margin-right: 55px;
+    }
+
+    .dropbtn {
+        font-size: 22px;
+        line-height: 30px;
+        color: #5BC3F8;
+        padding-right: 50px;
+      }
+
+      .dropdown-content a {
+        padding: 20px;
+        font-size: 22px;
+        line-height: 30px;
+        color: #5BC3F8;
+      }
+
+      footer{
+        padding-top: 100px;
+      }
+      
+      .footer-contacts{
+        margin-left: -110px;
+      }
+      
+      .footer-contacts h6{
+      font-size: 24px;
+      line-height: 26px;
+      color: #FFFFFF;
+      }
+      
+      .footer-contacts p{
+      font-size: 18px;
+      line-height: 20px;
+      color: #FFFFFF;
+      }
+      
+      .footer-logo{
+        width: 200px;
+        margin-left: -25px;
+        padding-right: 25px;
+      }
+      
+      .footer-menu a{
+      font-size: 16px;
+      line-height: 24px;
+      color: #FFFFFF;
+      }
+      
+      .socials{
+      
+      font-size: 24px;
+      line-height: 26px;
+      color: #FFFFFF;
+      padding-right: 30px;
+      }
+      
+      .social-icons img{
+        width: 45px;
+        padding-right: 38px;
+        padding-top: 20px;
+      } 
+  }
+
+  @media (max-width: 1415px){
+    .header-menu_item {
+        font-size: 20px;
+        line-height: 78px;
+        padding-right: 60px;
+    }
+    
+    .codesford-logo {
+        width: 200px;
+    }
+
+    .header-menu_item:last-child{
+        margin-right: 45px;
+    }
+
+    .dropbtn {
+        font-size: 20px;
+        line-height: 28px;
+        color: #5BC3F8;
+        padding-right: 50px;
+        
+      }
+
+      .dropdown-content a {
+        padding: 20px;
+        font-size: 20px;
+        line-height: 28px;
+        color: #5BC3F8;
+      }
+  }
+
+  @media (max-width: 1320px){
+    .header-menu_item {
+        font-size: 20px;
+        line-height: 78px;
+        padding-right: 55px;
+    }
+    
+    .codesford-logo {
+        width: 180px;
+    }
+
+    .header-menu_item:last-child{
+        margin-right: 15px;
+    }
+
+    .dropbtn {
+        font-size: 20px;
+        line-height: 28px;
+        color: #5BC3F8;
+        padding-right: 50px;
+        
+      }
+
+      .dropdown-content a {
+        padding: 18px;
+        font-size: 20px;
+        line-height: 28px;
+        color: #5BC3F8;
+      }
+
+      .contact h4{
+        font-size: 54px;
+        line-height: 70px;
+        letter-spacing: 0.12em;
+        color: #FFFFFF;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+      footer{
+        padding-top: 100px;
+      }
+      
+      .footer-contacts{
+        margin-left: -110px;
+      }
+      
+      .footer-contacts h6{
+      font-size: 22px;
+      line-height: 22px;
+      color: #FFFFFF;
+      }
+      
+      .footer-contacts p{
+      font-size: 16px;
+      line-height: 16px;
+      color: #FFFFFF;
+      }
+      
+      .footer-logo{
+        width: 180px;
+        margin-left: -25px;
+        padding-right: 25px;
+      }
+      
+      .footer-menu a{
+      font-size: 14px;
+      line-height: 20px;
+      color: #FFFFFF;
+      }
+      
+      .socials{
+      
+      font-size: 22px;
+      line-height: 22px;
+      color: #FFFFFF;
+      padding-right: 25px;
+      }
+      
+      .social-icons img{
+        width: 40px;
+        padding-right: 35px;
+        padding-top: 18px;
+      } 
+
+      .contact iframe{
+        height: 400px;
+      }
+  }
+
+  @media (max-width: 1290px){
+    .header-menu_item {
+        font-size: 18px;
+        line-height: 70px;
+        padding-right: 45px;
+    }
+    
+    .codesford-logo {
+        width: 160px;
+    }
+
+    .header-menu_item:last-child{
+        margin-right: 15px;
+    }
+
+    .dropbtn {
+        font-size: 18px;
+        line-height: 26px;
+        color: #5BC3F8;
+        padding-right: 50px;
+      }
+
+      .dropdown-content a {
+        padding: 16px;
+        font-size: 18px;
+        line-height: 26px;
+        color: #5BC3F8;
+      }
+
+      .footer-logo{
+        width: 160px;
+        margin-left: -25px;
+        padding-right: 25px;
+      }
+
+      .social-icons img{
+        width: 36px;
+        padding-right: 42px;
+        padding-top: 18px;
+      } 
+  }
+
+  @media (max-width: 1240px){
+    .footer-logo{
+      width: 140px;
+      margin-left: -25px;
+      padding-right: 35px;
+    }
+
+    .footer-menu a{
+      font-size: 14px;
+      line-height: 20.7px;
+      color: #FFFFFF;
+      }
+  }
+
+  @media (max-width: 1211px){
+    .header-menu_item {
+        font-size: 16px;
+        line-height: 62px;
+        padding-right: 40px;
+    }
+    
+    .codesford-logo {
+        width: 150px;
+    }
+
+    .header-menu_item:last-child{
+        margin-right: 45px;
+    }
+
+    .dropbtn {
+        font-size: 18px;
+        line-height: 30px;
+        color: #5BC3F8;
+        padding-right: 40px;
+      }
+
+      .dropdown-content a {
+        padding: 16px;
+        font-size: 18px;
+        line-height: 30px;
+        color: #5BC3F8;
+      }
+
+      .get-started h1{
+        font-size: 48px;
+        line-height: 46px;
+        color: #FFFFFF;
+        }
+
+      .button-get_started {
+        font-weight: 900;
+        line-height: 32px;
+      }
+
+      .contact h4{
+        font-size: 48px;
+        line-height: 62px;
+        letter-spacing: 0.12em;
+        color: #FFFFFF;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+      footer{
+        padding-top: 100px;
+      }
+      
+      .footer-contacts{
+        margin-left: -100px;
+      }
+      
+      .footer-contacts h6{
+      font-size: 20px;
+      line-height: 20px;
+      color: #FFFFFF;
+      }
+      
+      .footer-contacts p{
+      font-size: 14px;
+      line-height: 14px;
+      color: #FFFFFF;
+      }
+      
+      .footer-logo{
+        width: 180px;
+        margin-left: -25px;
+        padding-right: 25px;
+      }
+      
+      .footer-menu a{
+      font-size: 14px;
+      line-height: 18px;
+      color: #FFFFFF;
+      }
+      
+      .socials{
+      
+      font-size: 20px;
+      line-height: 20px;
+      color: #FFFFFF;
+      padding-right: 14px;
+      }
+      
+      .social-icons img{
+        width: 40px;
+        padding-right: 30px;
+        padding-top: 18px;
+      } 
+
+      .contact iframe{
+        height: 400px;
+      }
+  }
+
+  @media (max-width: 1121px){
+    .header-menu_item {
+        font-size: 14px;
+        line-height: 56px;
+        padding-right: 35px;
+    }
+    
+    .codesford-logo {
+        width: 150px;
+    }
+
+    .header-menu_item:last-child{
+        margin-right: 45px;
+    }
+
+    .dropbtn {
+        font-size: 16px;
+        line-height: 26px;
+        color: #5BC3F8;
+        padding-right: 35px;
+      }
+
+      .dropdown-content a {
+        padding: 14px;
+        font-size: 16px;
+        line-height: 26px;
+        color: #5BC3F8;
+      }
+
+      .get-started h1{
+        font-size: 40px;
+        line-height: 40px;
+        color: #FFFFFF;
+        }
+
+      .button-get_started {
+        font-weight: 900;
+        line-height: 32px;
+        font-size: 36px;
+      }
+
+      .contact h4{
+        font-size: 44px;
+        line-height: 54px;
+        letter-spacing: 0.12em;
+        color: #FFFFFF;
+        text-align: center;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+      footer{
+        padding-top: 60px;
+      }
+      
+      .footer-contacts{
+        margin-left: -90px;
+      }
+      
+      .footer-contacts h6{
+      font-size: 18px;
+      line-height: 18px;
+      color: #FFFFFF;
+      }
+      
+      .footer-contacts p{
+      font-size: 12px;
+      line-height: 12px;
+      color: #FFFFFF;
+      padding-bottom: 10px;
+      }
+      
+      .footer-logo{
+        width: 160px;
+        margin-left: -25px;
+        padding-right: 25px;
+      }
+      
+      .footer-menu a{
+      font-size: 12px;
+      line-height: 16px;
+      color: #FFFFFF;
+      }
+      
+      .socials{
+      font-size: 18px;
+      line-height: 18px;
+      color: #FFFFFF;
+      padding-right: 14px;
+      }
+      
+      .social-icons img{
+        width: 35px;
+        padding-right: 28px;
+        padding-top: 15px;
+      } 
+
+      .contact iframe{
+        height: 300px;
+      }
+  }
+
+  @media (max-width: 1000px){
+    .about-project{
+      background-image: url("../src/aboutProject.png");
+      background-size: 75%;
+      align-content: center;
+    }
+    
+    
+    .about-project h2{
+      text-align: center;
+      font-size: 60px;
+      line-height: 50px;
+      color: #FFFFFF;
+      letter-spacing: 0.12em;
+    }
+    
+    .container-users{
+    font-size: 48px;
+    line-height: 50px;
+    color: #FFFFFF;
+    text-align: center;
+    }
+    
+    .container-project h4{
+    font-size: 38px;
+    line-height: 36px;
+    color: #FFFFFF;
+    text-align: center;
+    }
+    
+    .first-reason{
+      margin-right: 220px;  
+    }
+    
+    .last-reason{
+      margin-left: 220px;  
+    }
+
+    .contact h4{
+      font-size: 44px;
+      line-height: 54px;
+      letter-spacing: 0.12em;
+      color: #FFFFFF;
+      text-align: center;
+      padding-top: 60px;
+      padding-bottom: 60px;
+  }
+
+    footer{
+      padding-top: 60px;
+    }
+    
+    .footer-contacts{
+      margin-left: -80px;
+    }
+    
+    .footer-contacts h6{
+    font-size: 16px;
+    line-height: 16px;
+    color: #FFFFFF;
+    
+    }
+    
+    .footer-contacts p{
+    font-size: 10px;
+    line-height: 12px;
+    color: #FFFFFF;
+    padding-bottom: 14px;
+    }
+    
+    .footer-logo{
+      width: 140px;
+      margin-left: -25px;
+      padding-right: 25px;
+    }
+    
+    .footer-menu a{
+    font-size: 10px;
+    line-height: 10px;
+    color: #FFFFFF;
+    }
+    
+    .socials{
+    font-size: 16px;
+    line-height: 16px;
+    color: #FFFFFF;
+    padding-right: 14px;
+    }
+    
+    .social-icons img{
+      width: 30px;
+      padding-right: 22px;
+      padding-top: 15px;
+    } 
+
+    .contact iframe{
+      height: 300px;
+    }
+  }
+
+  @media (max-width: 850px){
+    .header-menu_item {
+        font-size: 12px;
+        line-height: 56px;
+        padding-right: 20px;
+    }
+    
+    .codesford-logo {
+        width: 120px;
+    }
+
+    .header-menu_item:last-child{
+        margin-right: 30px;
+    }
+
+    .dropbtn {
+        font-size: 12px;
+        line-height: 22px;
+        color: #5BC3F8;
+        padding-right: 25px;
+      }
+
+      .dropdown-content a {
+        padding: 10px;
+        font-size: 12px;
+        line-height: 20px;
+        color: #5BC3F8;
+      }
+
+      .get-started h1{
+        font-size: 36px;
+        line-height: 40px;
+        color: #FFFFFF;
+        }
+
+      .button-get_started {
+        font-weight: 900;
+        line-height: 32px;
+        font-size: 32px;
+      }
+
+      .about-project{
+        background-image: url("../src/aboutProject.png");
+        background-size: 75%;
+        align-content: center;
+      }
+      
+      
+      .about-project h2{
+        text-align: center;
+        font-size: 50px;
+        line-height: 44px;
+        color: #FFFFFF;
+        letter-spacing: 0.1em;
+      }
+      
+      .container-users{
+      font-size: 40px;
+      line-height: 40px;
+      color: #FFFFFF;
+      text-align: center;
+      }
+      
+      .container-project h4{
+      font-size: 30px;
+      line-height: 28px;
+      color: #FFFFFF;
+      text-align: center;
+      }
+      
+      .first-reason{
+        margin-right: 160px;  
+      }
+      
+      .last-reason{
+        margin-left: 160px;  
+      }
+
+      .contact h4{
+        font-size: 38px;
+        line-height: 46px;
+        letter-spacing: 0.1em;
+        color: #FFFFFF;
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+  
+      footer{
+        padding-top: 40px;
+      }
+      
+      .footer-contacts{
+        margin-left: -90px;
+      }
+      
+      .footer-contacts h6{
+      font-size: 14px;
+      line-height: 14px;
+      color: #FFFFFF;
+      
+      }
+      
+      .footer-contacts p{
+      font-size: 8px;
+      line-height: 10px;
+      color: #FFFFFF;
+      }
+
+      .footer-contacts p:nth-child(2n){
+        margin-top: 18px;
+      }
+      
+      .footer-logo{
+        width: 120px;
+        margin-left: -16px;
+        padding-right: 25px;
+      }
+      
+      .footer-menu a{
+      font-size: 8px;
+      line-height: 8px;
+      color: #FFFFFF;
+      }
+      
+      .socials{
+      font-size: 14px;
+      line-height: 14px;
+      color: #FFFFFF;
+      padding-right: 12px;
+      }
+      
+      .social-icons img{
+        width: 25px;
+        padding-right: 20px;
+        padding-top: 15px;
+      } 
+  
+      .contact iframe{
+        height: 300px;
+      }
+
+      .socials-contacts{
+        display: none;
+      }
+
+      .footer-contacts span{
+        font-size: 8px;
+        line-height: 10px;
+        color: #FFFFFF;
+        font-family: Montserrat;
+        font-weight: 500;
+      }
+  }
+
+  @media (max-width: 768.98px){
+    .burger-menu{
+        display: block;
+    }
+
+    .header-menu_item {
+        display: none;
+    }
+
+    .dropbtn, .dropdown-content a {
+        display: none;        
+    }
+
+    .header-container{
+      height: 50px;
+    }
+
+    .get-started h1{
+      font-size: 30px;
+      line-height: 30px;
+      color: #FFFFFF;
+      }
+
+    .button-get_started {
+      font-weight: 900;
+      line-height: 28px;
+      font-size: 28px;
+      padding: 20px;
+    }
+
+    .contact h4{
+      font-size: 38px;
+      line-height: 46px;
+      letter-spacing: 0.1em;
+      color: #FFFFFF;
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+  }
+
+    footer{
+      padding-top: 40px;
+      flex-shrink: 100;
+    }
+    
+    .footer-contacts{
+      padding-left: 25px;
+    }
+    
+    .footer-contacts h6{
+    font-size: 12px;
+    line-height: 12px;
+    color: #FFFFFF;
+    
+    }
+    
+    .footer-contacts p{
+    font-size: 8px;
+    line-height: 10px;
+    color: #FFFFFF;
+    padding-bottom: 5px;
+    }
+    
+    .footer-logo{
+      display: none;
+    }
+    
+    .footer-menu{
+      margin-left: -10px;
+      line-height: 18px;
+    }
+
+    .footer-menu a{
+    font-size: 8px;
+    color: #FFFFFF;
+    margin-right: 5px;
+    }
+    
+    .socials{
+      display: none;
+    }
+
+    .socials-contacts{
+      display: unset;
+      font-size: 8px;
+      line-height: 10px;
+      color: #FFFFFF;
+    }
+
+    .social-icons_contacts img{
+      padding-right: 19px;
+      width: 23px;
+      margin-top: -15px;
+    }
+
+    .social-icons_contacts img:last-child{
+      padding-right: 0px;
+    }
+
+    .footer-contacts span{
+      font-size: 8px;
+      line-height: 10px;
+      color: #FFFFFF;
+      font-family: Montserrat;
+      font-weight: 500;
+    }
+
+    .contact iframe{
+      height: 250px;
+    }
+
+    .socials-contacts p{
+      font-weight: 800;
+      font-size: 12px;
+    }
+
+    footer{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .socials-contacts{
+      display: unset;
+    }
+}
+
+@media (max-width: 720px){
+  .burger-menu{
+      display: block;
+  }
+
+  .header-menu_item {
+      display: none;
+  }
+
+  .dropbtn, .dropdown-content a {
+      display: none;        
+  }
+
+  .header-container{
+    height: 50px;
+  }
+
+  .get-started h1{
+    font-size: 30px;
+    line-height: 30px;
+    color: #FFFFFF;
+    }
+
+  .button-get_started {
+    font-weight: 900;
+    line-height: 28px;
+    font-size: 28px;
+    padding: 20px;
+  }
+
+  .contact h4{
+    font-size: 38px;
+    line-height: 46px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+  footer{
+    padding-top: 40px;
+    flex-shrink: 100;
+  }
+  
+  .footer-contacts{
+    padding-left: 25px;
+  }
+  
+  .footer-contacts h6{
+  font-size: 10px;
+  line-height: 12px;
+  color: #FFFFFF;
+  
+  }
+  
+  .footer-contacts p{
+  font-size: 8px;
+  line-height: 8px;
+  color: #FFFFFF;
+  padding-bottom: 5px;
+  }
+  
+  
+  .footer-menu{
+    margin-left: -15px;
+    line-height: 18px;
+  }
+
+  .footer-menu a{
+  font-size: 8px;
+  color: #FFFFFF;
+  margin-right: 5px;
+  }
+
+  .socials-contacts{
+    display: unset;
+    font-size: 7px;
+    line-height: 8px;
+    color: #FFFFFF;
+  }
+
+  .social-icons_contacts img{
+    padding-right: 19px;
+    width: 23px;
+  }
+
+  .footer-contacts span{
+    font-size: 8px;
+    line-height: 10px;
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-weight: 500;
+  }
+
+  .contact iframe{
+    height: 250px;
+  }
+
+  .socials-contacts p{
+    font-weight: 800;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 680px){
+  .about-project{
+    background-image: url("../src/aboutProject.png");
+    background-size: 75%;
+    align-content: center;
+  }
+  
+  
+  .about-project h2{
+    text-align: center;
+    font-size: 40px;
+    line-height: 34px;
+    color: #FFFFFF;
+    letter-spacing: 0.05em;
+  }
+  
+  .container-users{
+  font-size: 32px;
+  line-height: 32px;
+  color: #FFFFFF;
+  text-align: center;
+  }
+  
+  .container-project h4{
+  font-size: 28px;
+  line-height: 28px;
+  color: #FFFFFF;
+  text-align: center;
+  }
+  
+  .first-reason{
+    margin-right: 100px;  
+  }
+  
+  .last-reason{
+    margin-left: 100px;  
+  }
+
+  .container-project div img{
+    width: 30px;
+  }
+
+  .footer-menu{
+    margin-left: -20px;
+    line-height: 18px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 670px){
+  .footer-menu{
+    margin-left: -25px;
+    line-height: 16px;
+  }
+
+  .socials-contacts{
+    font-size: 6px;
+  }
+ 
+}
+
+@media (max-width: 645px){
+  .footer-menu{
+    margin-left: -32px;
+    line-height: 16px;
+  }
+
+  .socials-contacts{
+    font-size: 6px;
+  }
+ 
+}
+
+@media (max-width: 610px){
+  .footer-menu{
+    margin-left: -45px;
+    line-height: 16px;
+  }
+
+  .socials-contacts{
+    font-size: 6px;
+  }
+ 
+}
+
+@media (max-width: 570px){
+  .burger-menu{
+      display: block;
+  }
+
+  .header-menu_item {
+      display: none;
+  }
+
+  .dropbtn, .dropdown-content a {
+      display: none;        
+  }
+
+  .header-container{
+    height: 50px;
+  }
+
+  .get-started h1{
+    font-size: 24px;
+    line-height: 24px;
+    color: #FFFFFF;
+    }
+
+  .button-get_started {
+    font-weight: 900;
+    line-height: 20px;
+    font-size: 20px;
+    padding: 20px;
+  }
+
+  .footer-menu{
+    margin-left: -50px;
+    line-height: 16px;
+  }
+
+}
+
+@media (max-width: 540px){
+  .footer-menu{
+    margin-left: -60px;
+    line-height: 16px;
+  }
+}
+
+@media (max-width: 500px){
+  .footer-menu{
+    margin-left: -70px;
+    line-height: 16px;
+  }
+
+  .footer-contacts p{
+    font-size: 7px;
+  }
+
+  .socials-contacts p{
+    font-size: 10px;
+    line-height: 6px;
+  }
+
+  .social-icons_contacts img{
+    padding-right: 9.5px;
+    width: 23px;
+  }
+
+  .footer-menu a{
+    font-size: 7px;
+  }
+
+  .footer-contacts h6{
+    font-size: 9px;
+  }
+
+}
+
+@media (max-width: 440px){
+  .footer-menu{
+    margin-left: -70px;
+    line-height: 16px;
+  }
+
+  .footer-contacts p{
+    font-size: 6px;
+  }
+
+  .footer-contacts h6{
+    font-size: 8px;
+  }
+
+  .socials-contacts p{
+    font-size: 9px;
+    line-height: 6px;
+  }
+
+  .social-icons_contacts img{
+    padding-right: 6px;
+    width: 23px;
+  }
+
+  .footer-menu a{
+    font-size: 6px;
+  }
+  
+}
+
+@media (max-width: 370px){
+    .burger-menu{
+        display: block;
+    }
+  
+    .header-menu_item {
+        display: none;
+    }
+  
+    .dropbtn, .dropdown-content a {
+        display: none;        
+    }
+  
+    .header-container{
+      height: 50px;
+    }
+  
+    .get-started h1{
+      font-size: 18px;
+      line-height: 18px;
+      color: #FFFFFF;
+      }
+  
+    .button-get_started {
+      font-weight: 900;
+      line-height: 14px;
+      font-size: 14px;
+      padding: 20px;
+    }
+
+    .container-project div img{
+      width: 24px;
+    }
+
+    .first-reason{
+      margin-right: 0px;  
+    }
+    
+    .last-reason{
+      margin-left: 0px;  
+    }
+
+    .footer-menu a{
+      font-size: 5.5px;
+    }
+}    
